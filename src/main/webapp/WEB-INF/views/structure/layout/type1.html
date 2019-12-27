@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" 
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Kim ddongs sample</title>    
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+<!-- 
+import sample
+
+<script th:src="@{/abc/a.js}"></script> 
+=> <script src="/abc/a.js"></script>
+
+<link rel="stylesheet" th:href="@{/abc/a.css}">
+=> <link rel="stylesheet" href="/abc/a.css">
+ -->
+</head>
+
+<!-- body 태그 내부의 header 를 담당하는 부분이다. -->
+<header th:replace="structure/header/type1 :: header"></header>
+
+<!-- 아래 div가 컨트롤러에 의해 교체되는 content 영역이다. -->
+<div layout:fragment="content"></div>
+
+<!-- body 태그 내부의 footer 를 담당하는 부분이다. -->
+<footer th:replace="structure/footer/type1 :: footer"></footer>
+
+</html>
