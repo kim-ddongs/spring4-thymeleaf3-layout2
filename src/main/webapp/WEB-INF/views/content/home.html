@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-    data-layout-decorate="~{structure/layout/type1}"
+    data-layout-decorate="~{structures/layout/type1}"
     >
 
 <div layout:fragment="content">
 
-  컨텐츠
-
+    "컨텐츠"
+    <div th:include="components/type1 :: type1('스프링 MVC','타임리프', '프레그먼트')"></div>
+    <br/><br/> <!-- 구분을 위한 개행 -->
+    <div th:include="components/type2 :: type2('스프링 MVC','타임리프', '프레그먼트')"></div>
+    <br/><br/> <!-- 구분을 위한 개행 -->
+    <div th:include="components/type2 :: type2('김동형수','개발기', '입니다')"></div>
 </div>
 
 </html>
